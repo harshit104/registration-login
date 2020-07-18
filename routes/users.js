@@ -6,6 +6,7 @@ const passport = require('passport');
 const User = require('../models/User');
 const { forwardAuthenticated } = require('../config/auth');
 
+
 // Login Page
 router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 
@@ -54,10 +55,11 @@ router.post('/register', (req, res) => {
           email,
           password
         });
-
+        //Hash Password
         bcrypt.genSalt(10, (err, salt) => {
           bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
+            //Set password to hashed
             newUser.password = hash;
             newUser
               .save()
