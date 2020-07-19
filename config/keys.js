@@ -1,4 +1,4 @@
-dbPassword = 'mongodb+srv://harshitAdmin:A4xpTNES3Dco5ito@cluster0-t0rar.mongodb.net/login?retryWrites=true&w=majority';
+dbPassword = 'mongodb+srv://<DBUser>:<Password>o@cluster0-t0rar.mongodb.net/<DBName>?retryWrites=true&w=majority';
 
 
 
